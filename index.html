@@ -5,10 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Esta es una landing creada con SASS desde Youtube">
     <meta name="robots" content="noindex,nofollow">
-    <title>Este es el título</title>
+    <title>Frontend Mentor | Huddle landing page with curved sections</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <script src="https://kit.fontawesome.com/53146069c7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav class="navbar wrapper">
+        <img src="./images/logo.svg" alt="Huddle Logo" class="navbar__logo site-logo">
+        <button class="navbar__button button">Try it free</button>
+    </nav>
     
-</body>
+    <main class="main__container wrapper">
+    
+    <div class="hero">
+        <h1 class="hero__title">Build The Community Your Fans Will Love</h1>
+        <p class="hero__text">Huddle re-imagines the way we build communities. You have a voice, but so does
+            your audience. Create connections with your users as you engage in genuine discussion.</p>
+        <button class="button hero__button">Get Started For Free</button>
+        <figure class="hero__media">
+            <img src="./images/screen-mockups.svg" alt="mockups huddle" class="hero__img">
+        </figure>
+
+    </div> 
+
+    <section class="stats">
+
+        <div class="stats__card">
+            <figure class="stats__icon stats__icon-community">
+                <img src="./images/icon-communities.svg" alt="icono communities">
+            </figure>
+            <span class="stats__number">1.4k+</span>
+            <span>Communities Formed</span>
+        </div>
+
+        <div class="stats__card">
+            <figure class="stats__icon stats__icon-messages">
+                <img src="./images/icon-messages.svg" alt="icono mesage">
+            </figure>
+            <span class="stats__number">2.7m+</span>
+            <span>Messages Sent</span>
+        </div>
+
+    </section>
+
+    <section class="section__grow home__section">
+        
+        <figure class="section__media">
+            <img src="./images/illustration-grow-together.svg" alt="grow Together">
+        </figure>
+        
+        <div class="section__info">
+            <h2 class="section__title">Grow Together</h2>
+            <p class="section__text">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
+        </div>
+
+    </section>
+
+    <section class="section__flowing home__section">
+        
+        <figure class="section__media">
+            <img src="./images/illustration-flowing-conversation.svg" alt="flowing conversations">
+        </figure>
+
+        <div class="section__info">
+            <h2 class="section__title">Flowing Conversations</h2>
+            <p class="section__text">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
+        </div>
+
+    </section>
+
+    <section class="section__ussers home__section">
+        
+        <figure class="section__media">
+            <img src="./images/illustration-your-users.svg" alt="your ussers">
+        </figure>
+
+        <div class="section__info">
+            <h2 class="section__title">Your Users</h2>
+            <p class="section__text">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
+        </div>
+
+    </section>
+
+    <section class="section__cta home__section">
+            <h2 class="section__title">Ready To Build Your Community</h2>
+            <button class="button">Get Started For Free</button>
+    </section>
+    </main>
+  
+    <footer class="footer wrapper">
+        <div class="footer__newsletter">
+            <h3>Newsletter</h3>
+            <p class="footer__text">To recieve tips on how to grow your community, sign up to our weekly newsletter. 
+            
+            We’ll never send you spam or pass on your email address</p>
+            <form action="footer__form" id="newsletter" name="newsletter">
+                <label for="newsletter-form"></label>
+                <input type="email" autocomplete="email" required id="newsletter">
+                <input type="submit" for="newsletter" id="newsletter">
+            </form>
+        </div>
+        
+        <div class="footer__contact">
+            <figure class="footer__logo site-logo">
+                <img src="" alt="">
+            </figure>
+            <p class="footer__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.
+            </p>
+
+            <ul class="contact__list">
+                <li class="contact__info">
+                    <a href="https://api.whatsapp.com/send?phone=573013105708&text=Hola%20Fabio%20Triana%20estoy%20interesad%40%20en%20sus%20serviicios%20" target="_blank" >
+                        <span class="contact__info-icon contact__info-phone">i</span>
+                        <span class="contact__info-text">Phone: +57 301 310 5748</span>
+                    </a>
+                    <a href="mailto:contacto@fabiotriana.com" target="_blank" >
+                        <span class="contact__info-icon contact__info-email">i</span>
+                        <span class="contact__info-text">Contacto@fabiotriana.com</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="social__list">
+                <li>
+                    <a href="https://www.facebook.com/Fabiotriana.web" class="social__icon social-facebook" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/soyfabiotriana/" class="social__icon social-instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/fabiotriana2" class="social__icon social-linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+  </body>
 </html>
