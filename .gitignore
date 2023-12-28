@@ -6,8 +6,8 @@ package.json
 README-template.md:Zone.Identifier
 
 style-guide.md:Zone.Identifier
+*.svg
 
 #   Ignoramos Carpetas
-/images
-svg*
-/node_modules
+images
+node_modules
