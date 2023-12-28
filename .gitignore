@@ -3,4 +3,8 @@ gulpfile.js
 package-lock.json
 package.json
 
+README-template.md
+README-template.md:Zone.Identifier
+
+style-guide.md:Zone.Identifier
 #   Ignoramos Carpetas
