@@ -1,4 +1,19 @@
-// @import 'mixings';
+@mixin button ($background-color, $color, $width:20rem) {
+    background-color: $background-color;
+    color: $color;
+    width: $width;
+    height: 2.4rem;
+    padding: 0.2rem;
+    font-weight: bold;
+    border-radius: 5rem;
+    border: none;
+}
+
+@mixin button-hover ($background-color, $color) {
+    cursor: pointer;
+    background-color: $background-color;
+    color: $color;
+}
 
 .button {
     @include button($Pink, $White);

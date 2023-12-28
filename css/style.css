@@ -35,16 +35,21 @@ body {
 
 .wrapper {
   min-width: 359px;
-  max-width: 1440px;
+  max-width: 29rem;
   margin: 0 auto;
+}
+@media screen and (min-width: 630px) {
+  .wrapper {
+    max-width: 120rem;
+  }
 }
 
 .button {
+  background-color: hsl(322, 100%, 66%);
+  color: #fff;
   width: 20rem;
   height: 2.4rem;
   padding: 0.2rem;
-  background-color: hsl(322, 100%, 66%);
-  color: #fff;
   font-weight: bold;
   border-radius: 5rem;
   border: none;
@@ -112,7 +117,7 @@ body {
 }
 @media screen and (min-width: 630px) {
   .hero__title {
-    max-width: 100rem;
+    max-width: 120rem;
   }
 }
 .hero__text {
@@ -122,6 +127,63 @@ body {
 }
 @media screen and (min-width: 630px) {
   .hero__text {
+    max-width: 120rem;
+  }
+}
+.hero__media {
+  max-width: 29rem;
+  margin: 0 auto;
+  margin-block-start: 10.4rem;
+}
+@media screen and (min-width: 630px) {
+  .hero__media {
+    max-width: 120rem;
+  }
+}
+@media screen and (min-width: 630px) {
+  .hero__media {
+    margin-block-start: 10rem;
     max-width: 100rem;
   }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 90rem;
+  margin-block-start: 12rem;
+}
+@media screen and (min-width: 630px) {
+  .stats {
+    flex-direction: row;
+  }
+}
+.stats__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.stats__card span:nth-last-child(1) {
+  color: #808185;
+}
+.stats__icon {
+  width: 3.2rem;
+  height: 2.8rem;
+  align-self: flex-start;
+}
+@media screen and (min-width: 630px) {
+  .stats__icon {
+    width: 5rem;
+    height: 4.5rem;
+  }
+}
+.stats__number {
+  font-size: 6.2rem;
+  line-height: 6.2rem;
+  font-weight: bold;
+  margin-block: 2rem 3rem;
+  color: hsl(192, 100%, 9%);
 }

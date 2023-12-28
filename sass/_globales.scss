@@ -66,8 +66,7 @@ body {
 
 .wrapper {
     min-width: $Query-Mobile;
-    max-width: $Query-Desktop;
-    margin:0 auto;
+    @include width-content;
 }
 
 

@@ -1,25 +1,27 @@
-@mixin button ($background-color, $color, $width:20rem) {
-    width: $width;
-    height: 2.4rem;
-    padding: 0.2rem;
-    background-color: $background-color;
-    color: $color;
-    font-weight: bold;
-    border-radius: 5rem;
-    border: none;
-}
-
-@mixin button-hover ($bg-color, $color) {
-    cursor: pointer;
-    background-color: $bg-color;
-    color: $color;
-}
+//  Define grillas width
 
 @mixin width-content {
     max-width: 29rem;
     margin: 0 auto;
 
     @media screen and (min-width: $Query-Tablet){
-        max-width: 100rem;        
+        max-width: 120rem;        
     }
 }
+
+//  Define Flex container proppierties
+
+@mixin flexcontainer ($flex-direction:column) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: $flex-direction;
+}
+
+@mixin flexcontainer-query ($flex-direction:row) {
+        @media screen and (min-width:$Query-Tablet)
+        {
+           flex-direction: $flex-direction;
+       }
+}
+

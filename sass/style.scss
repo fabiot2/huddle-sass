@@ -1,7 +1,8 @@
 //  Variables & Functions
 //  Global Layout
-@import 'globales';
 @import 'mixings';
+@import 'globales';
+
 
 //  colors
 
@@ -26,6 +27,61 @@
     &__text {
         @include width-content;
         margin-block: 4rem 5.2rem;
+    }
+
+    &__media {
+        @include width-content;
+        margin-block-start: 10.4rem;
+
+        @media screen and (min-width:$Query-Tablet) {
+            margin-block-start: 10rem;
+            max-width: 100rem;
+        }
+    }
+}
+
+.stats {
+    @include flexcontainer (column);
+    @include flexcontainer-query;
+    max-width: 90rem;
+    margin-block-start: 12rem;
+    
+    
+    &__card {
+    @include flexcontainer;
+    
+    span:nth-last-child(1) {
+        color: #808185;
+    }
+    }
+
+    &__icon {
+        width: 3.2rem;
+        height: 2.8rem;
+        align-self: flex-start;
+
+        @media screen and (min-width:$Query-Tablet) {
+            width:5rem;
+            height: 4.5rem;
+        }
+//i just ignore this lines to make more balanced design
+        // &-messages {
+        //     width: 2.4rem;
+        //     height: 2.1rem;
+
+        //     @media screen and (min-width:$Query-Tablet) {
+        //         width:3.8rem;
+        //         height: 3.8rem;
+        //     }
+        // }
+    }
+
+    &__number {
+        font-size: 6.2rem;
+        line-height: 6.2rem;
+        font-weight: bold;
+        margin-block: 2rem 3rem;
+        color: $Very-Dark-Cyan;
     }
 }
 
