@@ -12,19 +12,116 @@ ul {
   list-style: none;
 }
 
+figure {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.89rem;
+  padding-inline: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+  color: hsl(192, 100%, 9%);
 }
 
-.attribution {
-  font-size: 1.1rem;
+.wrapper {
+  min-width: 359px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.button {
+  width: 20rem;
+  height: 2.4rem;
+  padding: 0.2rem;
+  background-color: hsl(322, 100%, 66%);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5rem;
+  border: none;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: hsl(321, 100%, 78%);
+  color: #fff;
+}
+@media screen and (min-width: 630px) {
+  .button {
+    width: 40rem;
+    height: 4rem;
+  }
+}
+.button__secondary {
+  width: 8rem;
+  border: 0.1rem solid hsl(322, 100%, 66%);
+  color: hsl(322, 100%, 66%);
+  background-color: #fff;
+}
+.button__secondary:hover {
+  border: none;
+}
+@media screen and (min-width: 630px) {
+  .button__secondary {
+    width: 13.2rem;
+    height: 4rem;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2.8rem auto;
+}
+.navbar__logo {
+  width: 10rem;
+  height: 1.7rem;
+}
+@media screen and (min-width: 630px) {
+  .navbar__logo {
+    width: 18rem;
+    height: 3.2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navbar__logo {
+    width: 24rem;
+    height: 3.8rem;
+  }
+}
+
+.hero {
+  margin-block-start: 12rem;
   text-align: center;
 }
-
-.attribution a {
-  color: hsl(228, 100%, 55%);
+.hero__title {
+  max-width: 29rem;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.6rem;
+}
+@media screen and (min-width: 630px) {
+  .hero__title {
+    max-width: 100rem;
+  }
+}
+.hero__text {
+  max-width: 29rem;
+  margin: 0 auto;
+  margin-block: 4rem 5.2rem;
+}
+@media screen and (min-width: 630px) {
+  .hero__text {
+    max-width: 100rem;
+  }
 }

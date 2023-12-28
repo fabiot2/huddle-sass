@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:2.8rem auto;
+
+    &__logo {
+        width: 10rem;
+        height: 1.7rem;
+
+        @media  screen and (min-width:$Query-Tablet) {
+            width: 18rem;
+            height: 3.2rem;
+        }
+
+        @media screen and (min-width:$Query-Desktop) {
+            width: 24rem;
+            height: 3.8rem;
+        }
+    }
+
+
+}

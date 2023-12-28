@@ -1,5 +1,32 @@
 //  Variables
-$primary-color:hsl(228, 100%, 55%);
+
+// -- Colors
+$Pink:hsl(322, 100%, 66%);
+$Light-Pink: hsl(321, 100%, 78%);
+$Light-Red:hsl(0, 100%, 63%);
+// Neutral
+$Very-Dark-Cyan: hsl(192, 100%, 9%);
+$Very-Pale-Blue: hsl(207, 100%, 98%);
+$White: #fff;
+
+// Fonts
+$header-font-family: 'Poppins', sans-serif;
+$body-font-family:'Open Sans', sans-serif;
+$header-font-size:2.5rem;
+$header-line-height: $header-font-size * 1.44;
+$body-font-size: 1.4rem;
+$body-line-height: $body-font-size * 1.35;
+
+// @use 'sass:math';
+
+// @debug math.$e; // 2.7182818285
+
+// @debug 2.5 * 1.44;
+// Width
+$Query-Mobile: 359px;
+$Query-Tablet: 630px;
+$Query-Desktop: 1440px;
+
 //  Reseteo
 
 *, *::after, *::before {
@@ -16,14 +43,33 @@ ul {
     list-style: none;
 }
 
+figure {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+    padding-inline: 0.8rem;
+    font-family: $body-font-family;
+    background-color: $White;
+    color: $Very-Dark-Cyan;
+}
+
+.wrapper {
+    min-width: $Query-Mobile;
+    max-width: $Query-Desktop;
+    margin:0 auto;
 }
 
 
-.attribution { font-size: 1.1rem; text-align: center; }
-.attribution a { color: $primary-color; }
+// .attribution { font-size: 1.1rem; text-align: center; }
+// .attribution a { color: $primary-color; }

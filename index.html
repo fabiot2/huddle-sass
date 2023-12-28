@@ -9,16 +9,19 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/53146069c7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="main__container">
     <nav class="navbar wrapper">
         <img src="./images/logo.svg" alt="Huddle Logo" class="navbar__logo site-logo">
-        <button class="navbar__button button">Try it free</button>
+        <button class="navbar__button button button__secondary">Try it free</button>
     </nav>
     
-    <main class="main__container wrapper">
+    <main class="wrapper">
     
-    <div class="hero">
+    <div class="hero wrapper">
         <h1 class="hero__title">Build The Community Your Fans Will Love</h1>
         <p class="hero__text">Huddle re-imagines the way we build communities. You have a voice, but so does
             your audience. Create connections with your users as you engage in genuine discussion.</p>
@@ -97,16 +100,14 @@
     <footer class="footer wrapper">
         <div class="footer__newsletter">
             <h3>Newsletter</h3>
-            <p class="footer__text">To recieve tips on how to grow your community, sign up to our weekly newsletter. 
-            
-            We’ll never send you spam or pass on your email address</p>
+            <p class="footer__text">To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
             <form action="footer__form" id="newsletter" name="newsletter">
                 <label for="newsletter-form"></label>
                 <input type="email" autocomplete="email" required id="newsletter">
-                <input type="submit" for="newsletter" id="newsletter">
+                <input type="submit" for="newsletter" id="newsletter" class="button">
             </form>
         </div>
-        
+
         <div class="footer__contact">
             <figure class="footer__logo site-logo">
                 <img src="" alt="">

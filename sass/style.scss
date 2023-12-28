@@ -1,6 +1,7 @@
 //  Variables & Functions
 //  Global Layout
 @import 'globales';
+@import 'mixings';
 
 //  colors
 
@@ -8,3 +9,24 @@
 @import './components/buttons';
 
 //  Utilities (margin, padding, opacity)
+
+@import 'navbar';
+
+.hero {
+    margin-block-start: 12rem;
+    text-align: center;
+    
+    &__title {
+        @include width-content;
+        font-family: $header-font-family;
+        font-size: $header-font-size;
+        line-height: $header-line-height;
+    }
+
+    &__text {
+        @include width-content;
+        margin-block: 4rem 5.2rem;
+    }
+}
+
+// Fuentes responsivas sass 

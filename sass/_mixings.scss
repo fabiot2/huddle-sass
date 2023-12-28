@@ -1,0 +1,25 @@
+@mixin button ($background-color, $color, $width:20rem) {
+    width: $width;
+    height: 2.4rem;
+    padding: 0.2rem;
+    background-color: $background-color;
+    color: $color;
+    font-weight: bold;
+    border-radius: 5rem;
+    border: none;
+}
+
+@mixin button-hover ($bg-color, $color) {
+    cursor: pointer;
+    background-color: $bg-color;
+    color: $color;
+}
+
+@mixin width-content {
+    max-width: 29rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: $Query-Tablet){
+        max-width: 100rem;        
+    }
+}
