@@ -1,0 +1,6 @@
+#   Ignoramos Archivos
+gulpfile.js
+package-lock.json
+package.json
+
+#   Ignoramos Carpetas
