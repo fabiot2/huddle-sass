@@ -61,6 +61,11 @@ body {
     font-family: $body-font-family;
     background-color: $White;
     color: $Very-Dark-Cyan;
+
+    @media screen and (min-width:$Query-Tablet) {
+        font-size: $body-font-size * 1.4;
+        line-height: $body-line-height * 1.6;
+    }
 }
 
 .wrapper {
@@ -75,4 +80,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font-family;
     line-height: $header-line-height;
+
+    @media screen and (min-width:$Query-Tablet) {
+        font-size: $header-font-size * 1.25;
+        line-height: $header-line-height * 1.25;
+    }
 }

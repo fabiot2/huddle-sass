@@ -6,11 +6,16 @@
 //  colors
 
 //  components (button, card, navbar)
+
+@import './components/navbar';
+@import './components/footer';
+
 @import './components/buttons';
+@import './components/forms';
 
 //  Utilities (margin, padding, opacity)
 
-@import './components/navbar';
+
 
 .hero {
     margin-block-start: 12rem;
@@ -144,10 +149,7 @@
     &__info {
         @media screen and (min-width:$Query-Tablet) {
             width: 60%;
-            max-width: 46rem;
-        }
-        @media screen and (min-width:$Query-Desktop) {
-            width: 42%;
+            max-width: 52rem;
         }
 
     }
@@ -155,7 +157,7 @@
     &__title {
         margin-block-end: 2.2rem;
         @media screen and (min-width:$Query-Desktop) {
-            margin-block-end: 4rem;
+            margin-block-end: 2.8rem;
         }
     }
 
@@ -194,6 +196,10 @@
             flex-direction: column;
             justify-content: center;
             min-height: 80rem;
+        }
+
+        .section__title {
+            margin-block-end: 4rem;
         }
     }
 }
