@@ -2,8 +2,7 @@
 
 @mixin width-content {
     max-width: 29rem;
-    margin: 0 auto;
-
+    width: 100%;
     @media screen and (min-width: $Query-Tablet){
         max-width: 120rem;        
     }
@@ -11,17 +10,32 @@
 
 //  Define Flex container proppierties
 
-@mixin flexcontainer ($flex-direction:column) {
+@mixin flexcontainer ($flex-direction:column, $gap:0rem) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: $flex-direction;
+    gap:$gap;
 }
 
-@mixin flexcontainer-query ($flex-direction:row) {
+@mixin flexcontainer-query ($flex-direction:row,$gap:0) {
         @media screen and (min-width:$Query-Tablet)
-        {
+        {  
+           gap:$gap;
            flex-direction: $flex-direction;
        }
 }
 
+@mixin backgroundivisores ($bg-url, $bg-position:top) {
+    background-image: $bg-url;
+    background-position: $bg-position;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin backgroundivisores-query ($bg-url, $bg-position:top) {
+    @media screen and (min-width: $Query-Desktop) {
+        background-image: $bg-url;
+        background-position: $bg-position;
+    }
+}

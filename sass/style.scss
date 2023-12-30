@@ -3,7 +3,6 @@
 @import 'mixings';
 @import 'globales';
 
-
 //  colors
 
 //  components (button, card, navbar)
@@ -11,26 +10,30 @@
 
 //  Utilities (margin, padding, opacity)
 
-@import 'navbar';
+@import './components/navbar';
 
 .hero {
     margin-block-start: 12rem;
     text-align: center;
     
+    .wrapper {
+        @include flexcontainer (column);
+    }
+    
     &__title {
-        @include width-content;
+
         font-family: $header-font-family;
         font-size: $header-font-size;
         line-height: $header-line-height;
     }
 
     &__text {
-        @include width-content;
+
         margin-block: 4rem 5.2rem;
     }
 
     &__media {
-        @include width-content;
+
         margin-block-start: 10.4rem;
 
         @media screen and (min-width:$Query-Tablet) {
@@ -41,12 +44,23 @@
 }
 
 .stats {
-    @include flexcontainer (column);
-    @include flexcontainer-query;
-    max-width: 90rem;
-    margin-block-start: 12rem;
+    margin: 0 auto;
+
+    .wrapper {
+        @include flexcontainer (column, 10rem);
+        @include flexcontainer-query;
+        max-width: 90rem;
+    }
     
-    
+    padding-block: 12rem;
+    @media screen and (min-width:$Query-Desktop) {
+        padding-block: 12rem 24rem;
+    }
+
+    @include backgroundivisores (url('../images/bg-section-bottom-mobile-2.svg'), bottom);
+    @include backgroundivisores-query (url('../images/bg-section-top-desktop-1.svg'), bottom);
+
+
     &__card {
     @include flexcontainer;
     
@@ -86,3 +100,62 @@
 }
 
 // Fuentes responsivas sass 
+
+.section {
+
+    .wrapper {
+        height: 58rem;
+        justify-content: center;
+        text-align: center;
+
+        @media screen and (min-width:$Query-Tablet) {
+            justify-content: space-between;
+            text-align: left; 
+        }
+    }
+
+    &__media {
+        width: 26rem;
+        margin-bottom: 8.6rem;
+
+        @media screen and (min-width:$Query-Tablet) {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__info {
+        @media screen and (min-width:$Query-Tablet) {
+            width: 42%;
+        }
+    }
+
+    &__title {
+        margin-block-end: 2.2rem;
+        @media screen and (min-width:$Query-Tablet) {
+            margin-block-end: 4rem;
+        }
+    }
+
+    &__text {
+
+    }
+
+    &-grow, &-ussers {
+        background-color: $Very-Pale-Blue;
+        
+        .wrapper {
+            @media screen and (min-width:$Query-Tablet) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &-grow {
+
+    }
+
+    &-ussers {
+    
+    }
+}

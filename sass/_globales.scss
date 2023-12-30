@@ -58,7 +58,6 @@ html {
 body {
     font-size: $body-font-size;
     line-height: $body-line-height;
-    padding-inline: 0.8rem;
     font-family: $body-font-family;
     background-color: $White;
     color: $Very-Dark-Cyan;
@@ -66,9 +65,15 @@ body {
 
 .wrapper {
     min-width: $Query-Mobile;
+    padding: 0 0.8rem;
+    margin: 0 auto;
     @include width-content;
+    @include flexcontainer;
+    @include flexcontainer-query;
 }
 
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font-family;
+}
 // .attribution { font-size: 1.1rem; text-align: center; }
 // .attribution a { color: $primary-color; }

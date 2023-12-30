@@ -27,7 +27,6 @@ html {
 body {
   font-size: 1.4rem;
   line-height: 1.89rem;
-  padding-inline: 0.8rem;
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
   color: hsl(192, 100%, 9%);
@@ -35,20 +34,37 @@ body {
 
 .wrapper {
   min-width: 359px;
-  max-width: 29rem;
+  padding: 0 0.8rem;
   margin: 0 auto;
+  max-width: 29rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0rem;
 }
 @media screen and (min-width: 630px) {
   .wrapper {
     max-width: 120rem;
   }
 }
+@media screen and (min-width: 630px) {
+  .wrapper {
+    gap: 0;
+    flex-direction: row;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
 
 .button {
   background-color: hsl(322, 100%, 66%);
   color: #fff;
   width: 20rem;
-  height: 2.4rem;
+  height: 4rem;
   padding: 0.2rem;
   font-weight: bold;
   border-radius: 5rem;
@@ -62,11 +78,11 @@ body {
 @media screen and (min-width: 630px) {
   .button {
     width: 40rem;
-    height: 4rem;
   }
 }
 .button__secondary {
   width: 8rem;
+  height: 2.4rem;
   border: 0.1rem solid hsl(322, 100%, 66%);
   color: hsl(322, 100%, 66%);
   background-color: #fff;
@@ -82,10 +98,14 @@ body {
 }
 
 .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin: 2.8rem auto;
+}
+.navbar .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0rem;
 }
 .navbar__logo {
   width: 10rem;
@@ -108,37 +128,23 @@ body {
   margin-block-start: 12rem;
   text-align: center;
 }
+.hero .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0rem;
+}
 .hero__title {
-  max-width: 29rem;
-  margin: 0 auto;
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   line-height: 3.6rem;
 }
-@media screen and (min-width: 630px) {
-  .hero__title {
-    max-width: 120rem;
-  }
-}
 .hero__text {
-  max-width: 29rem;
-  margin: 0 auto;
   margin-block: 4rem 5.2rem;
 }
-@media screen and (min-width: 630px) {
-  .hero__text {
-    max-width: 120rem;
-  }
-}
 .hero__media {
-  max-width: 29rem;
-  margin: 0 auto;
   margin-block-start: 10.4rem;
-}
-@media screen and (min-width: 630px) {
-  .hero__media {
-    max-width: 120rem;
-  }
 }
 @media screen and (min-width: 630px) {
   .hero__media {
@@ -148,16 +154,36 @@ body {
 }
 
 .stats {
+  margin: 0 auto;
+  padding-block: 12rem;
+  background-image: url("../images/bg-section-bottom-mobile-2.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.stats .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  gap: 10rem;
   max-width: 90rem;
-  margin-block-start: 12rem;
 }
 @media screen and (min-width: 630px) {
-  .stats {
+  .stats .wrapper {
+    gap: 0;
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .stats {
+    padding-block: 12rem 24rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .stats {
+    background-image: url("../images/bg-section-top-desktop-1.svg");
+    background-position: bottom;
   }
 }
 .stats__card {
@@ -165,6 +191,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  gap: 0rem;
 }
 .stats__card span:nth-last-child(1) {
   color: #808185;
@@ -186,4 +213,47 @@ body {
   font-weight: bold;
   margin-block: 2rem 3rem;
   color: hsl(192, 100%, 9%);
+}
+
+.section .wrapper {
+  height: 58rem;
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (min-width: 630px) {
+  .section .wrapper {
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+.section__media {
+  width: 26rem;
+  margin-bottom: 8.6rem;
+}
+@media screen and (min-width: 630px) {
+  .section__media {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 630px) {
+  .section__info {
+    width: 42%;
+  }
+}
+.section__title {
+  margin-block-end: 2.2rem;
+}
+@media screen and (min-width: 630px) {
+  .section__title {
+    margin-block-end: 4rem;
+  }
+}
+.section-grow, .section-ussers {
+  background-color: hsl(207, 100%, 98%);
+}
+@media screen and (min-width: 630px) {
+  .section-grow .wrapper, .section-ussers .wrapper {
+    flex-direction: row-reverse;
+  }
 }

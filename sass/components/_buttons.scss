@@ -2,7 +2,7 @@
     background-color: $background-color;
     color: $color;
     width: $width;
-    height: 2.4rem;
+    height: 4rem;
     padding: 0.2rem;
     font-weight: bold;
     border-radius: 5rem;
@@ -24,11 +24,11 @@
 
     @media screen and (min-width:$Query-Tablet) {
         width: 40rem;
-        height: 4rem;
     }
    
     &__secondary {
         width: 8rem;
+        height: 2.4rem;
         border: 0.1rem solid $Pink;
         color: $Pink;
         background-color: $White;
