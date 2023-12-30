@@ -26,16 +26,15 @@
        }
 }
 
-@mixin backgroundivisores ($bg-url, $bg-position:top) {
-    background-image: $bg-url;
-    background-position: $bg-position;
-    background-repeat: no-repeat;
-    background-size: contain;
+@mixin backgroundivisores($bg-url-top, $bg-url-bottom) {
+    background-image: url($bg-url-top), url($bg-url-bottom);
+    background-position: top, bottom;
+    background-repeat: no-repeat,no-repeat;
+    background-size: contain, contain;
 }
 
-@mixin backgroundivisores-query ($bg-url, $bg-position:top) {
+@mixin backgroundivisores-query($bg-url-top, $bg-url-bottom) {
     @media screen and (min-width: $Query-Desktop) {
-        background-image: $bg-url;
-        background-position: $bg-position;
+        background-image: url($bg-url-top), url($bg-url-bottom);
     }
 }

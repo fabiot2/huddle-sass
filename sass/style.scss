@@ -45,6 +45,8 @@
 
 .stats {
     margin: 0 auto;
+    @include backgroundivisores ('','../images/bg-section-top-mobile-1.svg');
+    @include backgroundivisores-query ('','../images/bg-section-top-desktop-1.svg');
 
     .wrapper {
         @include flexcontainer (column, 10rem);
@@ -57,7 +59,7 @@
         padding-block: 12rem 24rem;
     }
 
-    @include backgroundivisores (url('../images/bg-section-bottom-mobile-2.svg'), bottom);
+    @include backgroundivisores (url('../images/bg-section-top-mobile-1.svg'), bottom);
     @include backgroundivisores-query (url('../images/bg-section-top-desktop-1.svg'), bottom);
 
 
@@ -104,14 +106,22 @@
 .section {
 
     .wrapper {
-        height: 58rem;
+        min-height: 50rem;
         justify-content: center;
         text-align: center;
 
+
         @media screen and (min-width:$Query-Tablet) {
-            justify-content: space-between;
-            text-align: left; 
+            flex-direction: column;
+            min-height: 0rem;
         }
+        @media screen and (min-width:$Query-Desktop) {
+            text-align: left; 
+            justify-content: space-between;
+            flex-direction: row;
+
+        }
+        
     }
 
     &__media {
@@ -119,26 +129,34 @@
         margin-bottom: 8.6rem;
 
         @media screen and (min-width:$Query-Tablet) {
+            width: 60%;
+            max-width: 46rem;
+            margin-bottom: 4rem;
+        }
+
+        @media screen and (min-width:$Query-Desktop) {
             width: 50%;
+            max-width: 52rem;
             margin-bottom: 0;
         }
     }
 
     &__info {
         @media screen and (min-width:$Query-Tablet) {
+            width: 60%;
+            max-width: 46rem;
+        }
+        @media screen and (min-width:$Query-Desktop) {
             width: 42%;
         }
+
     }
 
     &__title {
         margin-block-end: 2.2rem;
-        @media screen and (min-width:$Query-Tablet) {
+        @media screen and (min-width:$Query-Desktop) {
             margin-block-end: 4rem;
         }
-    }
-
-    &__text {
-
     }
 
     &-grow, &-ussers {
@@ -146,16 +164,36 @@
         
         .wrapper {
             @media screen and (min-width:$Query-Tablet) {
+                flex-direction: column;
+            }
+
+            @media screen and (min-width:$Query-Desktop) {
                 flex-direction: row-reverse;
             }
         }
     }
 
-    &-grow {
+    &-flowing {
+        @include backgroundivisores ('../images/bg-section-bottom-mobile-1.svg','../images/bg-section-top-mobile-2.svg');
+        @include backgroundivisores-query ('../images/bg-section-bottom-desktop-1.svg','../images/bg-section-top-desktop-2.svg');
 
+        .wrapper {
+            min-height: 77rem;
+
+            @media screen and (min-width:$Query-Tablet) {
+                min-height: 93rem;
+            }
+        }
     }
 
-    &-ussers {
-    
+    &-cta {
+        @include backgroundivisores ('../images/bg-section-bottom-mobile-2.svg','../images/bg-footer-top-mobile.svg');
+        @include backgroundivisores-query ('../images/bg-section-bottom-desktop-2.svg','../images/bg-footer-top-desktop.svg');
+
+        .wrapper {
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80rem;
+        }
     }
 }

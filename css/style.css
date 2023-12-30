@@ -58,6 +58,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
+  line-height: 3.6rem;
 }
 
 .button {
@@ -117,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 3.2rem;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .navbar__logo {
     width: 24rem;
     height: 3.8rem;
@@ -155,11 +156,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .stats {
   margin: 0 auto;
+  background-image: url(""), url("../images/bg-section-top-mobile-1.svg");
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
   padding-block: 12rem;
-  background-image: url("../images/bg-section-bottom-mobile-2.svg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-image: url(url("../images/bg-section-top-mobile-1.svg")), url(bottom);
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+@media screen and (min-width: 1200px) {
+  .stats {
+    background-image: url(""), url("../images/bg-section-top-desktop-1.svg");
+  }
 }
 .stats .wrapper {
   display: flex;
@@ -175,15 +185,14 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .stats {
     padding-block: 12rem 24rem;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .stats {
-    background-image: url("../images/bg-section-top-desktop-1.svg");
-    background-position: bottom;
+    background-image: url(url("../images/bg-section-top-desktop-1.svg")), url(bottom);
   }
 }
 .stats__card {
@@ -216,14 +225,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section .wrapper {
-  height: 58rem;
+  min-height: 50rem;
   justify-content: center;
   text-align: center;
 }
 @media screen and (min-width: 630px) {
   .section .wrapper {
-    justify-content: space-between;
+    flex-direction: column;
+    min-height: 0rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section .wrapper {
     text-align: left;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 .section__media {
@@ -232,11 +248,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (min-width: 630px) {
   .section__media {
+    width: 60%;
+    max-width: 46rem;
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__media {
     width: 50%;
+    max-width: 52rem;
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 630px) {
+  .section__info {
+    width: 60%;
+    max-width: 46rem;
+  }
+}
+@media screen and (min-width: 1200px) {
   .section__info {
     width: 42%;
   }
@@ -244,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 .section__title {
   margin-block-end: 2.2rem;
 }
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 1200px) {
   .section__title {
     margin-block-end: 4rem;
   }
@@ -254,6 +284,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (min-width: 630px) {
   .section-grow .wrapper, .section-ussers .wrapper {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-grow .wrapper, .section-ussers .wrapper {
     flex-direction: row-reverse;
   }
+}
+.section-flowing {
+  background-image: url("../images/bg-section-bottom-mobile-1.svg"), url("../images/bg-section-top-mobile-2.svg");
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+@media screen and (min-width: 1200px) {
+  .section-flowing {
+    background-image: url("../images/bg-section-bottom-desktop-1.svg"), url("../images/bg-section-top-desktop-2.svg");
+  }
+}
+.section-flowing .wrapper {
+  min-height: 77rem;
+}
+@media screen and (min-width: 630px) {
+  .section-flowing .wrapper {
+    min-height: 93rem;
+  }
+}
+.section-cta {
+  background-image: url("../images/bg-section-bottom-mobile-2.svg"), url("../images/bg-footer-top-mobile.svg");
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+@media screen and (min-width: 1200px) {
+  .section-cta {
+    background-image: url("../images/bg-section-bottom-desktop-2.svg"), url("../images/bg-footer-top-desktop.svg");
+  }
+}
+.section-cta .wrapper {
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80rem;
 }

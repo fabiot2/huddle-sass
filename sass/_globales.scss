@@ -25,7 +25,7 @@ $body-line-height: $body-font-size * 1.35;
 // Width
 $Query-Mobile: 359px;
 $Query-Tablet: 630px;
-$Query-Desktop: 1440px;
+$Query-Desktop: 1200px;
 
 //  Reseteo
 
@@ -74,6 +74,5 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font-family;
+    line-height: $header-line-height;
 }
-// .attribution { font-size: 1.1rem; text-align: center; }
-// .attribution a { color: $primary-color; }
